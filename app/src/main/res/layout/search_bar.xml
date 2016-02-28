@@ -3,14 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#2fb2e8"
-    android:fitsSystemWindows="true"
+    android:paddingTop="24dp"
     android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#ffffff"
         android:orientation="horizontal">
 
         <FrameLayout
@@ -25,14 +24,16 @@
                 android:gravity="center_vertical"
                 android:hint="@string/search_edit_hint"
                 android:padding="5dp"
+                android:background="#ffffff"
                 android:textColor="#aaaaaa"
+                android:visibility="gone"
                 android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null"
+                android:background="#ffffff"
                 android:gravity="center_vertical"
                 android:hint="@string/search_edit_hint"
                 android:padding="5dp"
@@ -44,10 +45,11 @@
         </FrameLayout>
 
         <Button
+            android:id="@+id/search"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="5dp"
-            android:background="#00ffffff"
+            android:background="#ffffff"
             android:gravity="center"
             android:text="@string/search"
             android:textColor="#655f5f"

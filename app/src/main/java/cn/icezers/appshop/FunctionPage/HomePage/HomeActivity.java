@@ -32,7 +32,7 @@ public class HomeActivity extends BaseFragmentActivity {
         _dataLayer = new HomeDataLayer();
         _uiLayer = new HomeUILayer();
 
-        findViewById(R.id.textview).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.search).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction()
@@ -59,7 +59,7 @@ public class HomeActivity extends BaseFragmentActivity {
     public void onBackPressed() {
         if (findViewById(R.id.edittext).getVisibility() == View.VISIBLE) {
             findViewById(R.id.edittext).setVisibility(View.GONE);
-            findViewById(R.id.textview).setVisibility(View.VISIBLE);
+            findViewById(R.id.textview).setVisibility(View.GONE);
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.open_frombelow_totop, R.anim.close_fromtop_tobelow)
                     .remove(getSupportFragmentManager().findFragmentByTag("search")).commitAllowingStateLoss();
